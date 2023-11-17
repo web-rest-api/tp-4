@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed&display=swap");
+
+:root {
+	--primary-clr: #37b6f3;
+	--accent-clr: #ec4dea;
+	--contrast: #f5feff;
+	--card: #c6c6c6;
+	--dark: rgb(41, 41, 41);
+	--border-rad: 5px;
+}
+
+/*general rules */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Encode Sans Semi Condensed", sans-serif;
+	color: var(--contrast);
+}
+
+img {
+	max-width: 100%;
+}
+
+ul,
+li {
+	list-style-type: none;
+}
+
+/* header */
+
+.header {
+	background-color: var(--primary-clr);
+}
+
+.header a {
+	text-decoration: none;
+	color: var(--contrast);
+	padding: 0.6em;
+	border-radius: var(--border-rad);
+}
+
+.header a:hover {
+	background-color: var(--accent-clr);
+}
+
+.header ul,
+.header nav {
+	display: flex;
+}
+
+.header ul {
+	width: 215px;
+	justify-content: space-between;
+}
+
+.header nav {
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5em 1em;
+	height: 96px;
+}
+
+.header img {
+	border-radius: 50%;
+	max-width: 55px;
+	object-fit: none;
+}
+
+/*  helper class  */
+.container {
+	max-width: 1250px;
+	margin: auto;
+}
+.active {
+	background-color: #9155fe;
+}
+
+/*  main-section  */
+.main-section {
+	text-align: center;
+	background-image: url("./imgs/mountains.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding: 1em 0.5em;
+	min-height: 290px;
+}
+
+.main-section img {
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	object-fit: cover;
+	top: 0;
+	max-height: 590px;
+}
+
+.main-section h1 {
+	text-align: center;
+	margin-bottom: 0.8em;
+	color: var(--primary-clr);
+	font-size: 7vw;
+	text-shadow: 1px 1px 2px #00000070;
+}
+
+.main-section p {
+	font-size: 18px;
+	text-shadow: 1px 1px 2px #000000e3;
+	max-width: 530px;
+	margin: auto;
+	text-align: center;
+	margin-bottom: 1em;
+	padding: 1em;
+	background: #f8f5f545;
+}
+
+.main-section button {
+	padding: 1em 1.5em;
+	border: none;
+	cursor: pointer;
+	border-radius: var(--border-rad);
+}
+
+.main-section button:first-child {
+	background-color: var(--primary-clr);
+	color: var(--contrast);
+}
+
+.main-section button:last-child {
+	color: var(--primary-clr);
+}
+/* features-section   */
+.features-section {
+	color: var(--dark);
+}
+.features-section p {
+	text-align: center;
+	margin-bottom: 1em;
+}
+.features-section h2 {
+	margin-top: 1em;
+	text-align: center;
+	font-size: 5vw;
+	color: var(--dark);
+	font-weight: 400;
+}
+
+.art-cont {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	margin-top: 2em;
+}
+
+.art-cont article {
+	background-color: #80808014;
+	padding: 1em 1.2em;
+	max-width: 240px;
+	text-align: center;
+	border-radius: var(--border-rad);
+	box-shadow: -3px 1px 8px #8080808a;
+	margin-bottom: 2em;
+}
+
+.art-cont i {
+	background: var(--primary-clr);
+	border-radius: 50%;
+	padding: 1.9em 2em;
+	color: white;
+	margin: 1em;
+	font-size: 1.8em;
+}
+
+.footer {
+	background: var(--dark);
+	text-align: center;
+	font-size: 1.2em;
+	padding: 1em;
+	margin-top: 2em;
+}
+
+.footer .social {
+	display: flex;
+	margin-top: 0.5em;
+	width: 100%;
+	justify-content: center;
+	gap: 2em;
+}
+
+/*   about    */
+.about-section,
+.contact-section {
+	color: #3b3a3a;
+	min-height: 82vh;
+	padding: 3em;
+}
+
+.about-section h2 {
+	margin-top: 2em;
+	font-size: 3em;
+	text-align: center;
+}
+
+.about-section p {
+	font-size: 2em;
+	max-width: 600px;
+	margin: auto;
+	margin-top: 1em;
+	text-align: center;
+}
+
+/*  contact   */
+
+.contact_container {
+	display: flex;
+	justify-content: space-around;
+}
+
+.contact-section h2 {
+	font-size: 3em;
+	margin-bottom: 1em;
+	text-align: center;
+}
+
+.contact_container form {
+	max-width: 50%;
+}
+
+form input {
+	width: 100%;
+	padding: 0.5em;
+	margin-bottom: 0.8em;
+}
+
+form textarea {
+	width: 100%;
+	min-width: 320px;
+}
+
+form button {
+	padding: 1em 1.5em;
+	border: none;
+	cursor: pointer;
+	border-radius: var(--border-rad);
+	display: block;
+	background: var(--accent-clr);
+	margin: 1em auto;
+	min-width: 135px;
+	color: white;
+}
+
+.contact_container iframe {
+	width: 50%;
+}
+
+/* media queries */
+@media (max-width: 728px) {
+	.contact_container {
+		flex-direction: column;
+	}
+	.contact_container form {
+		max-width: 100%;
+	}
+
+	.contact_container iframe {
+		width: 100%;
+	}
+}
